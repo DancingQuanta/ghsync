@@ -23,7 +23,11 @@ Inspired by Gisty (http://github.com/swdyh/gisty).
 
 import os
 import sys
-from clint import args
+try:
+    from clint import Args
+    args = Args()
+except ImportError:
+    from clint import args
 from clint.textui import puts, colored, indent
 import requests
 import json
