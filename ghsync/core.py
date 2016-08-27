@@ -48,7 +48,7 @@ GITHUB_USER = cmd('git config github.user')
 GITHUB_TOKEN = cmd('git config github.token')
 
 GHSYNC_DIR = os.environ.get('GHSYNC_DIR', '.')
-
+GHSYNC_DIR = os.path.expandvars(GHSYNC_DIR)
 
 
 def run():
