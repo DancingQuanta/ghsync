@@ -39,11 +39,6 @@ except ImportError:
     from commands import getoutput as cmd
 
 
-__author__ = 'Kenneth Reitz'
-__license__ = 'ISC'
-__copyright__ = '2011 Kenneth REitz'
-__version__ = '0.3.1'
-
 # GitHub configurations
 GITHUB_USER = cmd('git config github.user')
 GITHUB_TOKEN = cmd('git config github.token')
