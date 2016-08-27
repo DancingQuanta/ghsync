@@ -115,7 +115,7 @@ def run():
                     os.system('git pull')
 
                     if is_fork and upstream_on:
-                        print repo.__dict__
+                        print(repo.__dict__)
                         puts(colored.red('Adding upstream: {repo.parent}'.format(repo=repo)))
                         os.system('git remote add upstream git@github.com:{repo.parent}.git'.format(repo=repo))
 
@@ -125,7 +125,7 @@ def run():
                     if is_private:
                         puts(colored.red('Cloning private repo: {repo.name}'.format(repo=repo)))
                         os.system('git clone git@github.com:{repo.owner}/{repo.name}.git'.format(repo=repo))
-                        print ('git clone git@github.com:%s/%s.git' % (repo.owner, repo.name))
+                        print('git clone git@github.com:%s/%s.git' % (repo.owner, repo.name))
 
                         if is_fork and upstream_on:
                             os.chdir(repo.name)
@@ -137,7 +137,7 @@ def run():
                     else:
                         puts(colored.red('Cloning repo: {repo.name}'.format(repo=repo)))
                         os.system('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))
-                        print ('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))
+                        print('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))
 
             # return to base
             os.chdir('..')
